@@ -6,17 +6,17 @@
     <title>Document</title>
 </head>
 <body>
-    <a href="./item.php?id=12345">
-        <li>id: 12345</li>
+    <a href="./item.php?id=pants">
+        <li>id: pants</li>
     </a>
-    <a href="./item.php?id=27389">
-        <li>id: 27389</li>
+    <a href="./item.php?id=outer">
+        <li>id: outer</li>
     </a>
-    <a href="./item.php?id=573904">
-        <li>id: 573904</li>
+    <a href="./item.php?id=socks">
+        <li>id: socks</li>
     </a>
-    <a href="./item.php?id=573904">
-        <li>id: 46393</li>
+    <a href="./item.php?id=shoes">
+        <li>id: shoes</li>
     </a>
 </body>
 </html>

@@ -16,5 +16,35 @@
         echo "<p>Error: Item ID not specified</p>";
     }
     ?>
+    <?php
+
+    function search($array, $key, $value)
+    {
+        $results = array();
+
+        if (is_array($array)) {
+            if (isset($array[$key]) && $array[$key] == $value) {
+                $results[] = $array;
+            }
+
+            foreach ($array as $subarray) {
+                $results = array_merge($results, search($subarray, $key, $value));
+                //머지는 병합입니다~
+            }
+        }
+
+        return $results;
+    }
+
+    $json = file_get_contents('item.json');
+    $data = json_decode($json, true);
+
+    $results = search($data['items'], 'id', $id);
+
+    foreach ($results as $result) {
+        echo "종류와 가격: " . $result['id'] . " (" . $result['cost'] . ")\n";
+    }
+
+    ?>
 </body>
 </html>
