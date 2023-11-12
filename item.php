@@ -42,8 +42,9 @@
     $results = search($data['items'], 'id', $id);
 
     foreach ($results as $result) {
-        echo "종류와 가격: " . $result['id'] . " (" . $result['cost'] . ")\n";
+        echo "<span>종류와 가격: " . $result['id'] . " (" . $result['cost'] . ")</span>";
     }
+    
 
     ?>
 </body>
